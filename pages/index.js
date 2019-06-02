@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/MyLayout';
 
-const titles = [{ id: 'e388n22', title: 'Hello Next.JS' }, { id: 'e64arar7', title: 'Learn Next.js is awesome' }, { id: 'e5117arara', title: 'Deploy Apps with Zeit' }];
+const posts = [{ id: 'e8arha', title: 'Hello Next.js' }, { id: 'f77ajar', title: 'Learning Next.js is fun' }, { id: 'rer88a', title: 'Deploy with Zeit' }];
 
 const PostLink = ({ id, title }) => (
   <li>
-    <Link href={`/posts/${id}/?title=${title}`}>
+    <Link href={`/post?id=${id}&title=${title}`}>
       <a>{title}</a>
     </Link>
   </li>
@@ -17,14 +17,14 @@ const Index = () => (
     <h1>My Blog</h1>
     <ul>
       {
-          titles.map(({ title, id }) => (
-            <PostLink
-              key={title}
-              title={title}
-              id={id}
-            />
-          ))
-        }
+        posts.map(({ id, title }) => (
+          <PostLink
+            key={id}
+            id={id}
+            title={title}
+          />
+        ))
+      }
     </ul>
   </Layout>
 );
