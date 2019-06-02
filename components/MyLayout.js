@@ -7,18 +7,25 @@ const layoutStyle = {
   border: '1px solid #DDD',
 };
 
-// const Layout = props => (
-//   <div style={layoutStyle}>
-//     <Header />
-//     { props.children }
-//   </div>
-// );
-
-const withLayout = Page => props => (
+const Layout = props => (
   <div style={layoutStyle}>
     <Header />
-    <Page {...props} />
+    { props.children }
   </div>
 );
 
-export default withLayout;
+// const withLayout = Page => props => (
+//   <div style={layoutStyle}>
+//     <Header />
+//     <Page {...props} />
+//   </div>
+// );
+
+// const Layout = props => (
+//   <div style={layoutStyle}>
+//     <Header />
+//     { props.content }
+//   </div>
+// );
+
+export default Layout;

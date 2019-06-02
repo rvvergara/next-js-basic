@@ -1,10 +1,14 @@
 import React from 'react';
-import withLayout from '../components/MyLayout';
+import Layout from '../components/MyLayout';
 
-const About = () => (
+const content = (
   <div>
     <p>This is the about page</p>
   </div>
 );
 
-export default withLayout(About);
+const About = () => (
+  <Layout content={content} />
+);
+
+export default About;
